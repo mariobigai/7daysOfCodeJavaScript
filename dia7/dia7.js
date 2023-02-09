@@ -25,9 +25,8 @@ let resultado;
 
 alert("Bem vindo a Calculadora!");
 
-operacao = prompt('Digite a operação que deseja fazer: "Soma", "Subtração", "Multiplicação" ou "Divisão". Se quiser sair digite "sair"');
-
-while (operacao != 'sair') {
+do {
+    operacao = prompt('Digite a operação que deseja fazer: "Soma", "Subtração", "Multiplicação" ou "Divisão". Se quiser sair digite "sair"');
 
     while (operacao != "Soma" && operacao != "Subtração" && operacao != "Multiplicação" && operacao != "Divisão" && operacao != "sair") {
         alert("Operação não reconhecida");
@@ -66,7 +65,10 @@ while (operacao != 'sair') {
 
     alert(`O resultado é: ${resultado}`)
 
-    operacao = prompt('Digite a operação que deseja fazer: "Soma", "Subtração", "Multiplicação" ou "Divisão". Se quiser sair digite "sair"');
-}
+
+} while(operacao === "Soma" || operacao === "Subtração" || operacao === "Multiplicação" || operacao === "Divisão")
+
+    
+    
 
 alert("Obrigado por usar a calculadora!");
